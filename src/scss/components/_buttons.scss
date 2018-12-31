@@ -1,3 +1,5 @@
+@import '../variables';
+
 /* =Buttons
 -----------------------------------------------------------------------------*/
 .btn,
@@ -10,7 +12,7 @@ button.btn {
   display: inline-block;
   vertical-align: top;
 
-  font-family: $font-family-controls;
+  font-family: $ox-base-condensed;
   font-size: 1em;
   font-weight: 400;
 
@@ -272,5 +274,57 @@ button.btn-white {
         border-radius: 0 ($border-radius * 2) ($border-radius * 2) 0;
       }
     }
+  }
+}
+
+$color-blue: $intralox-blue--bright;
+
+.btn {
+  font-family: $ox-base-condensed;
+}
+
+.btn-blue,
+input[type="submit"].btn-blue,
+input[type="button"].btn-blue,
+input[type="reset"].btn-blue,
+button.btn-blue {
+  @include create-button($color-blue, $color-blue-dark, $color-white);
+
+  &.btn-outline {
+    color: $color-blue;
+
+    &:visited {
+      color: $color-blue;
+    }
+    &:hover,
+    &:hover:focus {
+      color: $color-white;
+    }
+    &:focus {
+      column-rule: $color-blue;
+    }
+  }
+}
+
+.btn-blue {
+  &:visited {
+    color: $color-white;
+  }
+}
+
+.btn-white,
+input[type="submit"].btn-white,
+input[type="button"].btn-white,
+input[type="reset"].btn-white,
+button.btn-white {
+  color: $color-white;
+
+  &.btn-outline {
+    border: 2px solid $color-white;
+    color: $color-white;
+  }
+
+  &:hover {
+    color: $color-blue;
   }
 }

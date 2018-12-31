@@ -38,11 +38,13 @@ $ox-heading-size: $font-size-h2-lg; // 1.5em / 24px;
 $ox-base-spacing: $ox-base-font-size * 1.25; // 20px;
 $ox-base-input-padding: $ox-base-font-size * .75; // 12px -- applies to input value, labels, placeholders
 $ox-font-size-small: ($font-size-root * .75) + 0rem;
+$ox-input-font-size: $ox-base-font-size * .9;
 /* for more font sizes, see plygrid's variables */
 
 // ## OX Shared Variables
 $nav-padding: $padding * 1.75;
 $nav-padding-extra: $padding * 2;
+$padding-extra: $nav-padding-extra;
 
 // ## Colors
 $emphasized-color: #F5A623;

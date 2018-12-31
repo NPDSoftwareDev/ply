@@ -16,6 +16,7 @@
 $intralox-logo-width: 98px;
 $light-nav-bg: rgba($color-white, 0.15);
 
+
 .ox-global-header {
   background: $intralox-blue;
   color: $color-white;
@@ -256,4 +257,159 @@ $light-nav-bg: rgba($color-white, 0.15);
 i-phone .feather {
   fill: currentColor;
   stroke-width: 0;
+}
+
+// The purpose of this file is to extend the form elements into OX custom
+// User Input styles.
+
+.user-action-container {
+  max-width: 600px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  height: auto;
+  margin: 3em auto;
+
+  &.double-action {
+    max-width: 800px;
+  }
+}
+
+.user-action-container__header {
+  border-bottom: 1px solid $border-color;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.user-action-container__headline {
+  font-family: $ox-base-condensed;
+  font-size: $font-size-h1-lg;
+  color: $ox-heading-color;
+
+  strong {
+    color: $emphasized-color;
+  }
+}
+
+.user-action-container__subheadline {
+  font-size: $font-size-h2-lg;
+}
+
+.user-action-container__header,
+.user-action-container__body,
+.user-action-container__aside {
+  padding: $padding * 3;
+}
+
+.user-action-container__body,
+.user-action-container__aside {
+  position: relative;
+  height: 100%;
+}
+
+.user-action-container__aside {
+  background: $intralox-blue;
+  color: $color-white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.float-label-group,
+.input-label-group {
+  display: block;
+  width: 100%;
+  margin-bottom: $padding-extra * 1.5;
+  position: relative;
+  padding-top: $padding;
+
+  input {
+    position: relative;
+    width: 100%;
+
+    &:focus + label,
+    &.has-valid-input + label {
+      color: $ox-input-label-color-focused;
+    }
+  }
+
+  label {
+    @include transition;
+
+    position: absolute;
+    top: -1em;
+  }
+}
+
+.float-label-group {
+  input {
+    position: relative;
+    width: 100%;
+
+    &:focus + label,
+    &.has-valid-input + label {
+      opacity: 1;
+      top: -1em;
+      color: $ox-input-label-color-focused;
+    }
+  }
+
+  label {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+$color-blue: $intralox-blue--bright;
+
+.btn {
+  font-family: $ox-base-condensed;
+}
+
+.btn-blue,
+input[type="submit"].btn-blue,
+input[type="button"].btn-blue,
+input[type="reset"].btn-blue,
+button.btn-blue {
+  @include create-button($color-blue, $color-blue-dark, $color-white);
+
+  &.btn-outline {
+    color: $color-blue;
+
+    &:visited {
+      color: $color-blue;
+    }
+    &:hover,
+    &:hover:focus {
+      color: $color-white;
+    }
+    &:focus {
+      column-rule: $color-blue;
+    }
+  }
+}
+
+.btn-blue {
+  &:visited {
+    color: $color-white;
+  }
+}
+
+.btn-white,
+input[type="submit"].btn-white,
+input[type="button"].btn-white,
+input[type="reset"].btn-white,
+button.btn-white {
+  color: $color-white;
+
+  &.btn-outline {
+    border: 2px solid $color-white;
+  }
+
+  &:hover {
+    color: $color-blue;
+  }
 }

@@ -1,4 +1,4 @@
-// =Form
+// =Base Form Elements;
 // ----------------------------------------------------------------------------
 button:active,
 button:focus {
@@ -34,13 +34,21 @@ input[type="color"],
 input[type="time"],
 input[type="search"],
 input[type="datetime-local"] {
+  @include transition;
+
   font-family: $ox-base-font;
-  font-size: $ox-base-font-size * .75;
+  font-size: $ox-input-font-size;
   box-shadow: none;
   padding: $ox-base-input-padding;
   line-height: $base-line;
-  border-radius: 0;
+  border-radius: $border-radius/2;
   outline: none;
+
+  &:hover,
+  &:focus {
+    background: $color-white;
+    border: 1px solid $ox-input-label-color-focused;
+  }
 }
 
 select[multiple],
@@ -124,4 +132,15 @@ legend {
   font-weight: bold;
   padding: 0 1em;
   margin-left: -1em;
+}
+
+label {
+  font-family: $ox-base-font;
+  font-size: $ox-input-font-size;
+  color: $ox-text-color;
+  margin-bottom: $padding * .75;
+  font-weight: 400;
+  display: block;
+  text-transform: capitalize;
+  letter-spacing: .05em;
 }

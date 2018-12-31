@@ -25,23 +25,38 @@
     <div class="main-container">
       <main>
         <header class="product-header"><h1 class="product-header__h1 condensed">**Title Needed**</h1><nav class="navbar"><ul _ngcontent-c2=""><li _ngcontent-c2=""><a href="">Request Access</a></li><li _ngcontent-c2=""><a href="">Login to Your Account</a></li></ul></nav></header>
-        <div class="container-fluid">
-          <article class="row height-100">
-            <div class="unit-50">
-              <div class="super-padding">
-                <h2 class="super-h1 condensed"> Collaborate with Intralox engineers, <strong class="emphasized-text">simply and directly</strong>. </h2>
-                <p class="lead-subhead">CalcLab provides faster updates for new information, new products, and the best Intralox calculators. It replaces legacy engineering programs and makes it easier to get to the latest calculators with cloud and mobile access. CalcLab gives you the confidence that you are working with the best information available and that Intralox has thought through the technical support needed to effectively use Intralox products.</p>
-                <a href="./register.html" class="btn btn-blue btn-big margin-right">Request Access Today</a>
-                <a href="./login.html" class="btn btn-blue btn-outline btn-big margin-right">Login To Your Account</a>
+        <div class="container container-fluid">
+          <section class="user-action-container double-action">
+            <div class="units-row split stacked">
+              <div class="unit-60">
+                <div class="user-action-container__body">
+                  <h2 class="user-action-container__headline">Login To Use <strong>Calclab</strong></h2>
+                  <p>Login with your Intralox credentials.</p>
+                  <form class="" action="" method="post">
+                    <div class="float-label-group">
+                      <input type="text" name="email" id="email" value="" placeholder="example@example.com">
+                      <label for="email">Enter your email</label>
+                    </div>
+                    <div class="float-label-group">
+                      <input type="text" name="password" id="password" value="" placeholder="Your Intralox Password">
+                      <label for="password">Enter your password</label>
+                    </div>
+                    <button class="btn btn-blue btn-big width-100" type="submit">Intralox User Login</button>
+                  </form>
+                </div>
+              </div>
+              <div class="unit-40">
+                <aside class="user-action-container__aside">
+                  <h3 class="user-action-container__subheadline">Not an Intralox Employee?</h3>
+                  <p>Not a problem, you can login by clicking the button below.</p>
+                  <a href="#" class="btn btn-white btn-outline">External Customer Login</a>
+                </aside>
               </div>
             </div>
-            <div class="unit-50 mobile-hidden">
-              <figure><img alt="Screenshot of Calclab Interface" class="width-70 home-callout-image" src="dist/images/intralox-splash-screenshot.jpg" srcset="dist/images/intralox-splash-screenshot@2x.jpg 2x"></figure>
-            </div>
-          </article>
+          </section>
         </div>
       </main>
-      <footer class="ox-global-footer"><summary>&copy; Intralox <time id="copyright-year"></time></summary><a href="#">Privacy Policy</a></footer>
+      <footer class="ox-global-footer"><summary>&copy; Intralox <time> 2018</time></summary><a href="#">Privacy Policy</a></footer>
     </div>
   </div>
 

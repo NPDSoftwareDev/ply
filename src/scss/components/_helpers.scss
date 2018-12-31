@@ -135,7 +135,7 @@
 .margin-right,
 %right-margin,
 %margin-right {
-  margin-right: $margin;
+  margin-right: $margin !important;
 }
 
 .right-margin--extra,
